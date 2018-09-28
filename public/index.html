@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>The JukeBox</title>
+  <!-- <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" /> -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="theme-color" content="#000000">
+
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+  <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+
+  <title>React App</title>
+</head>
+
+
+<!--file uploading for playlists-->
+<script src="./path/to/dropzone.js"></script>
+<!--file uploading for playlists-->
+
+
+<body>
+  <noscript>
+    You need to enable JavaScript to run this app.
+  </noscript>
+  <div id="root"></div>
+  <!-- ... -->
+  <script src="https://sdk.scdn.co/spotify-player.js"></script>
+  <script>
+    window.onSpotifyWebPlaybackSDKReady = () => {
+      window.Spotify = Spotify;       //Allows me to use the Spotify variable globally when referencing onSpotifyWebPlaybackSDKReady.
+    }     //used window to get around the fact that React runs on a weird copy of my page's HTML, so it can't interact with Global scopes otherwise.
+  </script>
+
+
+  <script src="https://sdk.scdn.co/spotify-player.js"></script>
+  <script>
+    window.onSpotifyWebPlaybackSDKReady = () => {
+      const token = '[My Spotify Web API access token]';
+      const player = new Spotify.Player({
+        name: 'The JukeBox',
+        getOAuthToken: cb => { cb(token); }
+      });
+
+      // Error handling, because God knows I'll need it in the morning (╯°□°）╯︵ ┻━┻
+      player.addListener('initialization_error', ({ message }) => { console.error(message); });
+      player.addListener('authentication_error', ({ message }) => { console.error(message); });
+      player.addListener('account_error', ({ message }) => { console.error(message); });
+      player.addListener('playback_error', ({ message }) => { console.error(message); });
+
+      // Playback status updates
+      player.addListener('player_state_changed', state => { console.log(state); });
+
+      // Ready (┛ಠ_ಠ)┛ ┳━┳
+      player.addListener('ready', ({ device_id }) => {
+        console.log('Ready with Device ID', device_id);
+      });
+
+      // Not Ready ノ(º _ ºノ)    ┳━┳
+      player.addListener('not_ready', ({ device_id }) => {
+        console.log('Device ID has gone offline', device_id);
+      });
+
+      // Connect to the player! ┳━┳彡/(◉ □ ◉\) In Soviet Russia table flips you
+      player.connect();
+    };
+  </script>
+</body>
+
+</html>

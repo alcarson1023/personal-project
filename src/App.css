@@ -1,0 +1,422 @@
+p,
+li {
+  color: white;
+}
+.App {
+  text-align: center;
+  background-image: linear-gradient(black, gray, white);
+  background-size: auto;
+  height: 400vh;
+  width: 100vw;
+  margin: 0px auto;
+  position: absolute;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.navBar {
+  /* background-color: rgb(29, 29, 29); */
+  padding: 5px;
+  width: 40%;
+  margin: 0px auto;
+  margin-top: -17%;
+  margin-left: 30%;
+  margin-bottom: 100px;
+  position: sticky;
+}
+.navButton {
+  /* text-shadow: 4px 4px 0 rgb(238,238,238) ; */
+  /* text-shadow: 6px 6px 0 rgb(112,112,112) ; */
+  font-size: 150%;
+  background: none;
+  border: none;
+  position: sticky;
+  color: white;
+  padding: 10px;
+}
+.navButton:hover {
+  background-color: gray;
+  /* margin: 0 15px 0 15px; */
+  cursor: pointer;
+}
+.navButton:focus {
+  outline: 0;
+}
+/* 
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+} */
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+h1 {
+  font-size: 54px;
+  color: #fff;
+  margin: 0px;
+  padding-top: 30px;
+}
+
+.playlistSingleBox {
+  width: 300px;
+  height: 400px;
+  padding: 50px;
+  margin: 50px;
+  /* float: none; */
+  background-color: rgb(148, 148, 148);
+  display: inline-block;
+}
+.playlistBigBox {
+  width: 90vw;
+  margin: 0 auto;
+  background-color: rgb(95, 95, 95);
+  display: flex;
+  flex-wrap: wrap;
+}
+.playlistBigBoxPlaylist {
+  width: 90vw;
+  margin: 0 auto;
+  /* background-color: rgb(95, 95, 95); */
+  display: flex;
+  flex-wrap: wrap;
+}
+.needsSpace {
+  margin: 10px;
+}
+
+.albumCover {
+  max-width: 300px;
+  max-height: 300px;
+}
+
+.header {
+  /* background-color: black; */
+  height: 150px;
+  /* box-shadow: 0px 0px 300px 200px black; */
+  font-size: 60px;
+  font-family: "Futura";
+  color: #fff;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff0080, 0 0 30px #ff0080,
+    0 0 40px #ff0080, 0 0 55px #ff0080, 0 0 75px #ff0080;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 15%;
+  margin-top: 100px;
+}
+
+.content {
+  background-color: gray;
+}
+
+.littleHeader {
+  color: white;
+  width: 40%;
+  display: inline-block;
+}
+
+.filter {
+  color: white;
+}
+
+.playlists {
+  color: white;
+  margin: 0px;
+  display: inline-block;
+}
+
+.nowPlaying {
+  color: white;
+  /* border: 15px solid white; */
+  width: 450px;
+  padding: 25px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  background-color: rgb(46, 45, 45);
+}
+
+#loginScreen {
+  /* text-align: center; */
+  margin: 0 auto;
+  margin-top: 10px;
+  font-family: "Futura";
+  color: #fff;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ca55f8, 0 0 30px #ca55f8,
+    0 0 40px #ca55f8, 0 0 55px #ca55f8, 0 0 75px #ca55f8;
+}
+.loginInput {
+  margin: 50px;
+}
+#loginLink {
+  text-decoration: none;
+  color: white;
+  animation: blinkingText 4s infinite;
+}
+@keyframes blinkingText {
+  0% {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ca55f8, 0 0 30px #ca55f8,
+      0 0 40px #ca55f8, 0 0 55px #ca55f8, 0 0 75px #ca55f8;
+  }
+  4% {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ca55f8, 0 0 30px #ca55f8,
+      0 0 40px #ca55f8, 0 0 55px #ca55f8, 0 0 75px #ca55f8;
+  }
+  4% {
+    text-shadow: none;
+  }
+  5% {
+    text-shadow: none;
+  }
+  5% {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ca55f8, 0 0 30px #ca55f8,
+      0 0 40px #ca55f8, 0 0 55px #ca55f8, 0 0 75px #ca55f8;
+  }
+  13% {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ca55f8, 0 0 30px #ca55f8,
+      0 0 40px #ca55f8, 0 0 55px #ca55f8, 0 0 75px #ca55f8;
+  }
+  13% {
+    text-shadow: none;
+  }
+  16% {
+    text-shadow: none;
+  }
+  16% {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ca55f8, 0 0 30px #ca55f8,
+      0 0 40px #ca55f8, 0 0 55px #ca55f8, 0 0 75px #ca55f8;
+  }
+  24% {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ca55f8, 0 0 30px #ca55f8,
+      0 0 40px #ca55f8, 0 0 55px #ca55f8, 0 0 75px #ca55f8;
+  }
+  24% {
+    text-shadow: none;
+  }
+  25% {
+    text-shadow: none;
+  }
+  25% {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ca55f8, 0 0 30px #ca55f8,
+      0 0 40px #ca55f8, 0 0 55px #ca55f8, 0 0 75px #ca55f8;
+  }
+  29% {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ca55f8, 0 0 30px #ca55f8,
+      0 0 40px #ca55f8, 0 0 55px #ca55f8, 0 0 75px #ca55f8;
+  }
+  29% {
+    text-shadow: none;
+  }
+  30% {
+    text-shadow: none;
+  }
+  30% {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ca55f8, 0 0 30px #ca55f8,
+      0 0 40px #ca55f8, 0 0 55px #ca55f8, 0 0 75px #ca55f8;
+  }
+  38% {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ca55f8, 0 0 30px #ca55f8,
+      0 0 40px #ca55f8, 0 0 55px #ca55f8, 0 0 75px #ca55f8;
+  }
+  38% {
+    text-shadow: none;
+  }
+  39% {
+    text-shadow: none;
+  }
+  39% {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ca55f8, 0 0 30px #ca55f8,
+      0 0 40px #ca55f8, 0 0 55px #ca55f8, 0 0 75px #ca55f8;
+  }
+  43% {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ca55f8, 0 0 30px #ca55f8,
+      0 0 40px #ca55f8, 0 0 55px #ca55f8, 0 0 75px #ca55f8;
+  }
+  44% {
+    text-shadow: none;
+  }
+  50% {
+    text-shadow: none;
+  }
+  51% {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ca55f8, 0 0 30px #ca55f8,
+      0 0 40px #ca55f8, 0 0 55px #ca55f8, 0 0 75px #ca55f8;
+  }
+  59% {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ca55f8, 0 0 30px #ca55f8,
+      0 0 40px #ca55f8, 0 0 55px #ca55f8, 0 0 75px #ca55f8;
+  }
+  59% {
+    text-shadow: none;
+  }
+  60% {
+    text-shadow: none;
+  }
+  60% {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ca55f8, 0 0 30px #ca55f8,
+      0 0 40px #ca55f8, 0 0 55px #ca55f8, 0 0 75px #ca55f8;
+  }
+  64% {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ca55f8, 0 0 30px #ca55f8,
+      0 0 40px #ca55f8, 0 0 55px #ca55f8, 0 0 75px #ca55f8;
+  }
+  64% {
+    text-shadow: none;
+  }
+  65% {
+    text-shadow: none;
+  }
+  65% {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ca55f8, 0 0 30px #ca55f8,
+      0 0 40px #ca55f8, 0 0 55px #ca55f8, 0 0 75px #ca55f8;
+  }
+  69% {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ca55f8, 0 0 30px #ca55f8,
+      0 0 40px #ca55f8, 0 0 55px #ca55f8, 0 0 75px #ca55f8;
+  }
+  69% {
+    text-shadow: none;
+  }
+  72% {
+    text-shadow: none;
+  }
+  72% {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ca55f8, 0 0 30px #ca55f8,
+      0 0 40px #ca55f8, 0 0 55px #ca55f8, 0 0 75px #ca55f8;
+  }
+  80% {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ca55f8, 0 0 30px #ca55f8,
+      0 0 40px #ca55f8, 0 0 55px #ca55f8, 0 0 75px #ca55f8;
+  }
+  80% {
+    text-shadow: none;
+  }
+  81% {
+    text-shadow: none;
+  }
+  81% {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ca55f8, 0 0 30px #ca55f8,
+      0 0 40px #ca55f8, 0 0 55px #ca55f8, 0 0 75px #ca55f8;
+  }
+  85% {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ca55f8, 0 0 30px #ca55f8,
+      0 0 40px #ca55f8, 0 0 55px #ca55f8, 0 0 75px #ca55f8;
+  }
+  85% {
+    text-shadow: none;
+  }
+  86% {
+    text-shadow: none;
+  }
+  86% {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ca55f8, 0 0 30px #ca55f8,
+      0 0 40px #ca55f8, 0 0 55px #ca55f8, 0 0 75px #ca55f8;
+  }
+  94% {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ca55f8, 0 0 30px #ca55f8,
+      0 0 40px #ca55f8, 0 0 55px #ca55f8, 0 0 75px #ca55f8;
+  }
+  94% {
+    text-shadow: none;
+  }
+  95% {
+    text-shadow: none;
+  }
+  95% {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ca55f8, 0 0 30px #ca55f8,
+      0 0 40px #ca55f8, 0 0 55px #ca55f8, 0 0 75px #ca55f8;
+  }
+  99% {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ca55f8, 0 0 30px #ca55f8,
+      0 0 40px #ca55f8, 0 0 55px #ca55f8, 0 0 75px #ca55f8;
+  }
+  100% {
+    text-shadow: none;
+  }
+}
+
+.button {
+  background-color: transparent;
+  display: inline-block;
+  padding: 0.35em 1.2em;
+  border: 0.1em solid #ffffff;
+  margin: 0 0.3em 0.3em 0;
+  border-radius: 0.12em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: #ffffff;
+  text-align: center;
+  transition: all 0.2s;
+}
+.button:focus {
+  outline: 0;
+}
+
+.button:hover {
+  color: #000000;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+@media all and (max-width: 30em) {
+   .button {
+    display: block;
+    margin: 0.4em auto;
+  }
+}
+
+.buttonLink {
+  background-color: black;
+  box-shadow: 0px 2px 18px 10px black;
+  font-family: "Futura";
+  color: #fff;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff0080, 0 0 30px #ff0080,
+    0 0 40px #ff0080, 0 0 55px #ff0080, 0 0 75px #ff0080;
+  text-align: center;
+  text-decoration: none;
+  margin: 0 auto;
+  padding: 0px;
+  clear: both;
+}
+
+@media (max-width: 550px) {
+  .playlists {
+    width: 20%;
+  }
+  .playlistSingleBox {
+    margin: 0 auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    width: 40%;
+    font-size: 12px;
+    height: 250px;
+  }
+  .albumCover {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  .nowPlaying {
+    width: 80vw;
+  }
+  .navButton {
+    font-size: 20px;
+  }
+}
+
+/* @media (min-width: 900px) {
+  .playlist {
+    width: 200px;
+  }
+} */
